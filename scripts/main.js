@@ -1,11 +1,16 @@
+const choices = ["rock", "paper", "scissors"];
+
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
 function getComputerChoice(){
-    const choices = ["rock", "paper", "scissors"];
     let randomChoice = getRandomInt(3);
     return choices[randomChoice];
 }
 
-console.log(getComputerChoice());
+function getHumanChoice() {
+    let userChoice = prompt("Enter your play(rock, paper, scissors)");
+    userChoice = userChoice.toLowerCase();
+    return userChoice;
+}
