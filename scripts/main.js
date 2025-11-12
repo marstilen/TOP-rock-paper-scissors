@@ -11,7 +11,7 @@ function getComputerChoice(){
 }
 
 function getHumanChoice() {
-    let userChoice = prompt("Enter your play(rock, paper, scissors)");
+    let userChoice = prompt("Enter your play (rock, paper, scissors)");
     userChoice = userChoice.toLowerCase();
     return userChoice;
 }
