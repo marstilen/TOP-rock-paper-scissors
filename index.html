@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="scripts/main.js"></script>
+    <script src="scripts/main.js" defer></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/main.css" />
     <title>Document</title>
   </head>
   <body>
+    <header>
+      <h1>Welcome to rock papper scissors!</h1>
+      <p>Play rock papper scissors against a computer.</p>
+      <h2 id="playerScore">Player score:</h2>
+      <h2 id="computerScore">Computer score:</h2>
+    </header>
     <main>
       <div id="playerElements">
         <div class="card" onclick="playRound(0)">

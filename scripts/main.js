@@ -1,6 +1,9 @@
 const choices = ["rock", "paper", "scissors"];
 let computerScore = 0; 
 let humanScore = 0; 
+let humanScoreHeader = document.querySelector("#playerScore");
+let computerScoreHeader = document.querySelector("#computerScore");
+console.log(humanScoreHeader);
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
@@ -25,11 +28,13 @@ function playRound(humanChoice) {
     else if(humanChoice-1 == computerChoice || (humanChoice == 0 && computerChoice == 2)){
         console.log(`You won, ${choices[humanChoice]} beats ${choices[computerChoice]}!`);
         humanScore++;
+        humanScoreHeader.innerText = `Player score: ${humanScore}`;
     }
     else if(humanChoice < computerChoice || (computerChoice == 0 && humanChoice == 2))
     {
         console.log(`You lost, ${choices[computerChoice]} beats ${choices[humanChoice]}!`);
         computerScore++;
+        computerScoreHeader.innerText = `Computer score: ${computerScore}`;
     }
     else{
         console.log("error")
