@@ -16,8 +16,9 @@ function getHumanChoice() {
     return userChoice;
 }
 
-function playRound(computerChoice, humanChoice) {
-    humanChoice = choices.indexOf(humanChoice);
+function playRound(humanChoice) {
+    let computerChoice = getComputerChoice();
+    console.log(computerChoice);
     if (computerChoice == humanChoice) {
         console.log("Tie!");
     }
